@@ -9,5 +9,9 @@
 
 # Object
 - Attribute (Something that describes the objecct )
-    - Car 
+    - Car Object (Attribute -->color --- car1 ---> color ('blue'))
+    -Class level Attributes 
+
+
+    Behavior 
 

@@ -1,14 +1,38 @@
 class Student:
+    grade = 0
+    passing_grade = 75
+    award_credit = False
+
     def __init__(self, first,last,status):
         self.first_name = first #these are instance variables
         self.last = last
         self.status = status
         self.student_email = first + last + '@mail.weber.edu'
 
-W01234 = Student('Kyle', 'Anderson','Pass')
-W01235 = Student('Willy','Wanka', 'Pass')
+        #Behavior
+        def printStudentInfo(self):
+            print('fullname:' self.first, self.last, '\nEmail:' self.email, '\nAward_credit:' self.status)
 
-print(W01234.first, W01234.last, W01234.email, W01234.status)
+        def setGrade(self, grade):
+            self.student_grade = grade
+            if self.grade < self.passing_grade:
+                self.award_credit = False
+            else:
+                self.award_credit = True
+    def extraCredit(self, points):
+        newGrade = slef.grade + points
+        return newGrade
+
+
+W01234 = Student('Kyle', 'Anderson') #instance of Student Class
+W01235 = Student('Willy','Wanka')
+
+print('Start of the semester')
+print('-----------------------')
+
+W01234.extraCredit(30)
+
+print(W01234.passing_grade)
 print(W01235.first, W01235.last, W01235.email, W01235.status)
 
 
