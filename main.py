@@ -1,7 +1,7 @@
 from Students import Student
 
 
-def main ()
+def main ():
 
 W01234 = Student('Kyle', 'Anderson') #instance of Student Class
 W01235 = Student('Willy','Wanka')
@@ -31,3 +31,9 @@ W01235.status = "Pass"
 # print(W01234.email)
 # print(W01235.email)
 
+
+
+
+
+if __name__ == "__main__":
+    main
