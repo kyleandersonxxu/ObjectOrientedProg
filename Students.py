@@ -15,13 +15,17 @@ class Student:
 
         def setGrade(self, grade):
             self.student_grade = grade
-            if self.grade < self.passing_grade:
-                self.award_credit = False
-            else:
-                self.award_credit = True
+            passingClass()
+            
     def extraCredit(self, points):
-        newGrade = slef.grade + points
-        return newGrade
+        self.grade = self.grade + points
+        passingClass()
+
+    def passingClass(self):
+        if self.grade < self.passing_grade:
+            self.award_credit = False
+         else:
+            self.award_credit = True
 
 
 W01234 = Student('Kyle', 'Anderson') #instance of Student Class
