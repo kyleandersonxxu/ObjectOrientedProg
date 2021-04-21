@@ -3,28 +3,41 @@ class Student:
     passing_grade = 75
     award_credit = False
 
-    def __init__(self, first,last,status):
-        self.first_name = first #these are instance variables
+    def __init__(self, first, last):
+        self.first = first #these are instance variables
         self.last = last
-        self.status = status
-        self.student_email = first + last + '@mail.weber.edu'
+        self.email = first + last + '@mail.weber.edu'
 
         #Behavior
         def printStudentInfo(self):
-            print('fullname:' self.first, self.last, '\nEmail:' self.email, '\nAward_credit:' self.status)
+            print('Full Name:', self.first, self.last, '\nEmail:', self.email, '\nAward_credit:' )
 
         def setGrade(self, grade):
-            self.student_grade = grade
-            self.passingClass()
+            self.grade = grade
+            if self.grade < self.passing_grade:
+                self.award_credit = False
+            else:
+                self.award_credit = True
 
-    def extraCredit(self, points):
-        self.grade = self.grade + points
-        self.passingClass()
+W01234 = Student('Kyle', 'Anderson') #instance of the Student Class
+W01235 = Student('Waldo', 'Wildcat')
 
-    def passingClass(self):
-        if self.grade < self.passing_grade:
-            self.award_credit = False
-         else:
-            self.award_credit = True
+print('Start of the Semester')
+print('---------------------') 
 
+W01234.printStudentInfo()
+W01235.printStudentInfo()
 
+print('Middle of the Semester')
+print('---------------------')
+
+W01234.setGrade(45)
+W01235.setGrade(75)
+
+W01234.printStudentInfo()
+W01235.printStudentInfo()
+
+print('End of the Semester')
+print('--------------------')
+W01234.printStudentInfo()
+W01235.printStudentInfo()
